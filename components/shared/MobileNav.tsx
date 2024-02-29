@@ -16,7 +16,7 @@ const MobileNav = () => {
   return (
      <header className='header'>
         <Link href="/" className="flex items-center gap-2 md:py-2">
-            <Image src="/assets/images/ailu-texto-sem-fundo.png" alt="logo" width={160} height={28} />
+            <Image src="/assets/images/ailu-texto-sem-fundo.png" alt="logo" width={130} height={28} />
         </Link>
         <nav className="flex gap-2">
             <SignedIn>
@@ -49,7 +49,7 @@ const MobileNav = () => {
 
             </SignedIn>
             <SignedOut>
-                    <Button asChild className='button bg-purple-gradient bg-cover'>
+                    <Button asChild className=''>
                         <Link href="/sign-in">Login</Link>
                     </Button>
                 </SignedOut>
