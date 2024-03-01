@@ -312,7 +312,7 @@
 
   /* Sidebar Component */
   .sidebar {
-    @apply hidden h-screen w-72 bg-white p-5 shadow-md shadow-purple-200/50 lg:flex;
+    @apply hidden h-full w-72 bg-white p-5 shadow-md shadow-purple-200/50 lg:flex;
   }
 
   .sidebar-logo {
