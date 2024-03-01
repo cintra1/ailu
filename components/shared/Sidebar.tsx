@@ -26,10 +26,12 @@ const Sidebar = () => {
 
                             return(
                                 <li key={link.route} className={`sidebar-nav_element group ${
-                                    isActive ? 'bg-purple-gradient text-white' : 'text-gray'
+                                    isActive ? 'text-black-menu' : 'text-gray-menu'
                                 }`}>
                                     <Link className='sidebar-link' href={link.route}>
-                                        <Image src={link.icon} alt="logo" width={24} height={24} className={`${isActive && 'brightness-200'}`} />
+                                        {
+                                            //<Image src={link.icon} alt="logo" width={18} height={18} />
+                                        }
                                         {link.label}
                                     </Link>
                                 </li>
@@ -42,17 +44,19 @@ const Sidebar = () => {
 
                             return(
                                 <li key={link.route} className={`sidebar-nav_element group ${
-                                    isActive ? 'bg-purple-gradient text-white' : 'text-gray'
+                                    isActive ? 'text-black-menu' : 'text-gray-menu'
                                 }`}>
                                     <Link className='sidebar-link' href={link.route}>
-                                        <Image src={link.icon} alt="logo" width={24} height={24} className={`${isActive && 'brightness-200'}`} />
+                                        {
+                                            //<Image src={link.icon} alt="logo" width={18} height={18} className={`${isActive && 'brightness-200'}`} />
+                                        }
                                         {link.label}
                                     </Link>
                                 </li>
                             )
                         })}
                             <li className="flex-center cursor-pointer gap-2 p-4">
-                                <UserButton afterSignOutUrl='/' showName />
+                                <UserButton afterSignOutUrl='/' showName/>
                             </li>
                         </ul>
                 </SignedIn>

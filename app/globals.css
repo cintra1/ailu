@@ -95,7 +95,7 @@
   }
 
   .gradient-text {
-    @apply bg-purple-gradient bg-cover bg-clip-text text-transparent;
+    @apply bg-black bg-cover bg-clip-text text-transparent;
   }
 
   /* ===== ALIGNMENTS */
@@ -142,9 +142,13 @@
     @apply font-semibold text-[18px] leading-[140%];
   }
 
-  /* 16 */
+  /* 16 
   .p-16-semibold {
     @apply font-semibold text-[16px] leading-[140%];
+  }*/
+
+  .p-16-semibold {
+    @apply text-[14px] leading-[140%];
   }
 
   .p-16-medium {
@@ -302,7 +306,7 @@
   }
 
   .header-nav_elements {
-    @apply mt-8 flex w-full flex-col items-start gap-5;
+    @apply mt-8 flex w-full flex-col items-start gap-3;
   }
 
   /* Search Component */
@@ -312,7 +316,7 @@
 
   /* Sidebar Component */
   .sidebar {
-    @apply hidden h-full w-72 bg-white p-5 shadow-md shadow-purple-200/50 lg:flex;
+    @apply hidden h-max min-h-screen w-72 bg-white p-5 shadow-md shadow-purple-200/50 lg:flex;
   }
 
   .sidebar-logo {
@@ -328,12 +332,13 @@
   }
 
   .sidebar-nav_element {
-    @apply flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-purple-100 hover:shadow-inner;
+    @apply flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:underline;
   }
 
   .sidebar-link {
-    @apply p-16-semibold flex size-full gap-4 p-4;
+    @apply p-16-semibold flex size-full gap-4 p-3 pl-4 pr-4;
   }
+
 
   /* TransformationForm Component */
   .prompt-field {
@@ -370,7 +375,16 @@
 }
 
 .cl-userButtonOuterIdentifier {
-  font-size: 16px;
-  font-weight: 600;
+  margin-top: 3px;
+  font-size: 14px;
+  font-weight: 500;
   color: #384262;
+}
+
+.text-black-menu{
+  color: #09090B;
+}
+
+.text-gray-menu{
+  color: #71717A;
 }
