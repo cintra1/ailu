@@ -95,7 +95,7 @@
   }
 
   .gradient-text {
-    @apply bg-black bg-cover bg-clip-text text-transparent;
+    @apply bg-black bg-clip-text text-transparent;
   }
 
   /* ===== ALIGNMENTS */
