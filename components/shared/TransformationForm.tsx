@@ -34,6 +34,8 @@ import { getCldImageUrl } from "next-cloudinary"
 import { addImage, updateImage } from "@/lib/actions/image.actions"
 import { useRouter } from "next/navigation"
 import { InsufficientCreditsModal } from "./InsufficientCredisModal"
+import Lottie from 'react-lottie'
+import animationData from '@/public/easter-cat.json'
  
 export const formSchema = z.object({
   title: z.string(),
@@ -52,6 +54,16 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
   const [transformationConfig, setTransformationConfig] = useState(config)
   const [isPending, startTransition] = useTransition()
   const router = useRouter()
+  const [animationState, setAnimationState] = useState({ isStopped: false, isPaused: false }); 
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true, 
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
 
   const initialValues = data && action === 'Update' ? {
     title: data?.title,
@@ -220,7 +232,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
             )}  
           />
         )}
-
+ 
         {(type === 'remove' || type === 'recolor') && (
           <div className="prompt-field">
             <CustomField 
