@@ -18,7 +18,7 @@ const Credits = async () => {
   return (
     <>
       <Header
-        title="Comprar créditos"
+        title="Comprar Créditos"
         subtitle="Escolha um pacote de crédito adequado às suas necessidades!"
       />
 
@@ -26,14 +26,23 @@ const Credits = async () => {
         <ul className="credits-list">
           {plans.map((plan) => (
             <li key={plan.name} className="credits-item">
-              <div className="flex-center flex-col gap-3">
-                <Image src={plan.icon} alt="check" width={50} height={50} />
-                <p className="p-20-semibold mt-2 text-purple-500">
-                  {plan.name}
-                </p>
-                <p className="h1-semibold text-dark-600">${plan.price}</p>
-                <p className="p-16-regular">{plan.credits} Credits</p>
-              </div>
+              {plan.name === "Gratuito" ? (
+                <div className="flex-center flex-col gap-3">
+                  <Image src={plan.icon} alt="check" width={50} height={50} />
+                  <p className="p-20-semibold mt-2 text-purple-500">
+                    {plan.name}
+                  </p>
+                  <p className="h1-semibold text-dark-600">R$ {plan.price}</p>
+                  <p className="p-16-regular">1 a 5 Créditos</p>
+                </div>) : (
+                <div className="flex-center flex-col gap-3">
+                  <Image src={plan.icon} alt="check" width={50} height={50} />
+                  <p className="p-20-semibold mt-2 text-purple-500">
+                    {plan.name}
+                  </p>
+                  <p className="h1-semibold text-dark-600">R$ {plan.price}</p>
+                  <p className="p-16-regular">{plan.credits} Créditos</p>
+                </div>)}
 
               {/* Inclusions */}
               <ul className="flex flex-col gap-5 py-9">
@@ -55,10 +64,12 @@ const Credits = async () => {
                 ))}
               </ul>
 
-              {plan.name === "Free" ? (
-                <Button variant="outline" className="credits-btn">
-                  Free Consumable
-                </Button>
+              {plan.name === "Gratuito" ? (
+                <a href="https://forms.gle/UpSpX24VkrTNziZW6">
+                  <Button variant="outline" className="w-full">
+                  Pedir créditos gratuitos
+                  </Button>
+                </a>
               ) : (
                 <SignedIn>
                   <Checkout

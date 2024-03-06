@@ -44,75 +44,75 @@ export const navLinks = [
   export const plans = [
     {
       _id: 1,
-      name: "Free",
+      name: "Gratuito",
       icon: "/assets/icons/free-plan.svg",
       price: 0,
-      credits: 20,
+      credits: 1,
       inclusions: [
         {
-          label: "20 Free Credits",
+          label: "Acesso básico",
           isIncluded: true,
         },
         {
-          label: "Basic Access to Services",
+          label: "Planos limitados",
           isIncluded: true,
         },
         {
-          label: "Priority Customer Support",
+          label: "Suporte Prioritário",
           isIncluded: false,
         },
         {
-          label: "Priority Updates",
+          label: "Prioridade nas Atualizações",
           isIncluded: false,
         },
       ],
     },
     {
       _id: 2,
-      name: "Pro Package",
+      name: "Pacote Pro",
       icon: "/assets/icons/free-plan.svg",
-      price: 40,
-      credits: 120,
+      price: 2.50,
+      credits: 10,
       inclusions: [
         {
-          label: "120 Credits",
+          label: "10 Créditos",
           isIncluded: true,
         },
         {
-          label: "Full Access to Services",
+          label: "Acesso Completo aos Serviços",
           isIncluded: true,
         },
         {
-          label: "Priority Customer Support",
+          label: "Suporte Prioritário",
           isIncluded: true,
         },
         {
-          label: "Priority Updates",
+          label: "Prioridade nas Atualizações",
           isIncluded: false,
         },
       ],
     },
     {
       _id: 3,
-      name: "Premium Package",
+      name: "Pacote Premium",
       icon: "/assets/icons/free-plan.svg",
-      price: 199,
-      credits: 2000,
+      price: 12.50,
+      credits:  50,
       inclusions: [
         {
-          label: "2000 Credits",
+          label: "50 Créditos",
           isIncluded: true,
         },
         {
-          label: "Full Access to Services",
+          label: "Acesso Completo aos Serviços",
           isIncluded: true,
         },
         {
-          label: "Priority Customer Support",
+          label: "Suporte Prioritário",
           isIncluded: true,
         },
         {
-          label: "Priority Updates",
+          label: "Prioridade nas Atualizações",
           isIncluded: true,
         },
       ],
