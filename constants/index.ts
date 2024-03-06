@@ -5,37 +5,37 @@ export const navLinks = [
       icon: "/assets/icons/home.svg",
     },
     {
-      label: "Image Restore",
+      label: "Restauração de Imagem",
       route: "/transformations/add/restore",
       icon: "/assets/icons/image.svg",
     },
     {
-      label: "Generative Fill",
+      label: "Preenchimento Generativo",
       route: "/transformations/add/fill",
       icon: "/assets/icons/stars.svg",
     },
     {
-      label: "Object Remove",
+      label: "Remover Objeto",
       route: "/transformations/add/remove",
       icon: "/assets/icons/scan.svg",
     },
     {
-      label: "Object Recolor",
+      label: "Recolorir Objeto",
       route: "/transformations/add/recolor",
       icon: "/assets/icons/filter.svg",
     },
     {
-      label: "Background Remove",
+      label: "Remover Fundo",
       route: "/transformations/add/removeBackground",
       icon: "/assets/icons/camera.svg",
     },
     {
-      label: "Profile",
+      label: "Perfil",
       route: "/profile",
       icon: "/assets/icons/profile.svg",
     },
     {
-      label: "Buy Credits",
+      label: "Comprar Créditos",
       route: "/credits",
       icon: "/assets/icons/bag.svg",
     },
@@ -122,29 +122,29 @@ export const navLinks = [
   export const transformationTypes = {
     restore: {
       type: "restore",
-      title: "Restore Image",
-      subTitle: "Refine images by removing noise and imperfections",
+      title: "Restauração de Imagem",
+      subTitle: "Aperfeiçoa imagens removendo ruído e imperfeições",
       config: { restore: true },
       icon: "image.svg",
     },
     removeBackground: {
       type: "removeBackground",
-      title: "Background Remove",
-      subTitle: "Removes the background of the image using AI",
+      title: "Remover Fundo",
+      subTitle: "Remove o fundo da imagem utilizando a IA",
       config: { removeBackground: true },
       icon: "camera.svg",
     },
     fill: {
       type: "fill",
-      title: "Generative Fill",
-      subTitle: "Enhance an image's dimensions using AI outpainting",
+      title: "Preenchimento Generativo",
+      subTitle: "Muda as dimensões de uma imagem utilizando a pintura com IA",
       config: { fillBackground: true },
       icon: "stars.svg",
     },
     remove: {
       type: "remove",
-      title: "Object Remove",
-      subTitle: "Identify and eliminate objects from images",
+      title: "Remover Objeto",
+      subTitle: "Identifica e elimina o objeto da imagem",
       config: {
         remove: { prompt: "", removeShadow: true, multiple: true },
       },
@@ -152,8 +152,8 @@ export const navLinks = [
     },
     recolor: {
       type: "recolor",
-      title: "Object Recolor",
-      subTitle: "Identify and recolor objects from the image",
+      title: "Recolorir Objeto",
+      subTitle: "Identifica e recolore o objeto da imagem",
       config: {
         recolor: { prompt: "", to: "", multiple: true },
       },
