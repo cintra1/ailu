@@ -26,7 +26,7 @@ const Sidebar = () => {
 
                             return(
                                 <li key={link.route} className={`sidebar-nav_element group ${
-                                    isActive ? 'text-black-menu' : 'text-gray-menu'
+                                    isActive ? 'text-black-menu p-16-semibold-t' : 'text-gray-menu'
                                 }`}>
                                     <Link className='sidebar-link' href={link.route}>
                                         {

@@ -305,10 +305,10 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
           />
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="">
           <Button 
             type="button"
-            className="submit-button capitalize"
+            className="mr-2"
             disabled={isTransforming || newTransformation === null}
             onClick={onTransformHandler}
           >
@@ -316,7 +316,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
           </Button>
           <Button 
             type="submit"
-            className="submit-button capitalize"
+            className=""
             disabled={isSubmitting}
           >
             {isSubmitting ? 'Enviando...' : 'Salvar Imagem'}

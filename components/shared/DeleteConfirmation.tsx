@@ -22,10 +22,10 @@ export const DeleteConfirmation = ({ imageId }: { imageId: string }) => {
 
   return (
     <AlertDialog>
-      <AlertDialogTrigger asChild className="w-full rounded-full">
+      <AlertDialogTrigger asChild className="">
         <Button
           type="button"
-          className="button h-[44px] w-full md:h-[54px]"
+          className=""
           variant="destructive"
         >
           Excluir imagem

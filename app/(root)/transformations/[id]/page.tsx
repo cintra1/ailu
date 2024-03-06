@@ -85,7 +85,7 @@ const ImageDetails = async ({ params: { id } }: SearchParamProps) => {
 
         {userId === image.author.clerkId && (
           <div className="mt-4 space-y-4">
-            <Button asChild type="button" className="submit-button capitalize">
+            <Button asChild type="button" className="mr-2">
               <Link href={`/transformations/${image._id}/update`}>
               Atualizar imagem
               </Link>
