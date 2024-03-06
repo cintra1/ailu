@@ -110,7 +110,7 @@
   /* ===== TYPOGRAPHY */
   /* 44 */
   .h1-semibold {
-    @apply text-[24px] font-semibold sm:text-[28px] leading-[120%] sm:leading-[56px];
+    @apply text-[20px] font-semibold sm:text-[28px] leading-[120%] sm:leading-[56px];
   }
 
   /* 36 */
@@ -161,7 +161,7 @@
   }
 
   .p-16-regular {
-    @apply font-normal text-[14px] leading-[140%] sm:text-[16px];
+    @apply font-normal text-[12px] leading-[140%] sm:text-[16px];
   }
 
   /* 14 */
