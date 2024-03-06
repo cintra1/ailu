@@ -31,8 +31,8 @@ const MediaUploader = ( { onValueChange, setImage, image, publicId, type }: Medi
         onValueChange(result?.info.public_id)
 
         toast({
-            title: 'Image uploaded successfully!',
-            description: '1 credit was deducted from your account.',
+            title: 'Imagem carregada com sucesso!',
+            description: '1 crédito foi gasto da sua conta.',
             duration: 5000,
             className: 'success-toast'
         })
@@ -40,8 +40,8 @@ const MediaUploader = ( { onValueChange, setImage, image, publicId, type }: Medi
 
     const onUploadErrorHandler = () => {
         toast({
-            title: 'Something went wrong when uploading!',
-            description: 'Please try again.',
+            title: 'Ocorreu algum erro durante o carregamento!',
+            description: 'Tente novamente.',
             duration: 5000,
             className: 'error-toast'
         })
@@ -59,7 +59,7 @@ const MediaUploader = ( { onValueChange, setImage, image, publicId, type }: Medi
       >
           {({ open }) => (
               <div className="flex flex-col gap-4">
-                  <h3 className='h3-bold text-dark-600'>
+                  <h3 className='h3-bold text-purple-500'>
                       Original
                   </h3>
 
@@ -84,7 +84,7 @@ const MediaUploader = ( { onValueChange, setImage, image, publicId, type }: Medi
                                       width={24} height={24} />
                                  
                               </div>
-                              <p className='p-14-medium'>Click here to upload image</p>
+                              <p className='p-14-medium'>Clique aqui para carregar uma imagem</p>
                           </div>
                   )}
               </div>

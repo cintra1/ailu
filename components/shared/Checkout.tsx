@@ -30,8 +30,8 @@ const Checkout = ({
     const query = new URLSearchParams(window.location.search);
     if (query.get("success")) {
       toast({
-        title: "Order placed!",
-        description: "You will receive an email confirmation",
+        title: "Compra efectuada!",
+        description: "Você receberá um e-mail de confirmação",
         duration: 5000,
         className: "success-toast",
       });
@@ -39,8 +39,8 @@ const Checkout = ({
 
     if (query.get("canceled")) {
       toast({
-        title: "Order canceled!",
-        description: "Continue to shop around and checkout when you're ready",
+        title: "Compra cancelada!",
+        description: "Continue a fazer as suas compras e faça o check-out quando estiver pronto",
         duration: 5000,
         className: "error-toast",
       });
@@ -66,7 +66,7 @@ const Checkout = ({
           role="link"
           className="w-full rounded-full bg-purple-gradient bg-cover"
         >
-          Buy Credit
+          Comprar créditos
         </Button>
       </section>
     </form>
