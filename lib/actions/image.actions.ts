@@ -92,7 +92,6 @@ export async function getImageById(imageId: string) {
   }
 }
 
-// GET IMAGES
 export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
   limit?: number;
   page: number;
@@ -111,7 +110,9 @@ export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
     let expression = 'folder=ailu';
 
     if (searchQuery) {
-      expression += ` AND ${searchQuery}`
+      expression += ` AND resource_type=image AND (tags=${searchQuery} OR context.title=${searchQuery})`;
+    } else {
+      expression += ' AND resource_type=image';
     }
 
     const { resources } = await cloudinary.search
@@ -124,10 +125,15 @@ export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
 
     if(searchQuery) {
       query = {
-        publicId: {
-          $in: resourceIds
-        }
+        $or: [
+          { publicId: { $in: resourceIds } },
+          { title: { $regex: searchQuery, $options: 'i' } }
+        ]
       }
+    } else {
+      query = {
+        publicId: { $in: resourceIds }
+      };
     }
 
     const skipAmount = (Number(page) -1) * limit;
