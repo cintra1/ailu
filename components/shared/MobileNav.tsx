@@ -2,7 +2,7 @@
 
 import React from 'react'
 import {
-    Sheet, SheetContent,SheetTrigger,} from "@/components/ui/sheet"
+    Sheet, SheetClose, SheetContent,SheetTrigger,} from "@/components/ui/sheet"
 import Link from 'next/link'
 import Image from 'next/image'
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
@@ -11,6 +11,7 @@ import { usePathname } from 'next/navigation'
 import { Button } from '../ui/button'
 
 const MobileNav = () => {
+    
     const pathname = usePathname();
 
   return (
@@ -35,10 +36,11 @@ const MobileNav = () => {
 
                             return(
                                 <li key={link.route} className={`${isActive && 'gradient-text'} p-18 flex whitespace-nowrap text-gray-menu`}>
+                                    <SheetClose asChild>
                                     <Link className={`sidebar-link cursor-pointer  ${isActive && 'text-black-menu'}`} href={link.route}>
-                                       
                                         {link.label}
-                                    </Link>
+                                        </Link>
+                                    </SheetClose>
                                 </li>
                             )
                         })}

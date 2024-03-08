@@ -6,7 +6,8 @@ import { Toaster } from '@/components/ui/toaster'
 import React from 'react'
 import NextNProgress from 'nextjs-progressbar'
 
-const Layout = ({ children }: {children: React.ReactNode }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
+  
   return (
     <>
       <main className='root'>
@@ -14,8 +15,7 @@ const Layout = ({ children }: {children: React.ReactNode }) => {
         <MobileNav /> 
         <div className="root-container">
           <div className="wrapper">
-                   <NextNProgress />
-                   {children}
+            {children}
           </div>
        </div>
       
