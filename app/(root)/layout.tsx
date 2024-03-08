@@ -12,12 +12,12 @@ const Layout = ({ children }: {children: React.ReactNode }) => {
       <main className='root'>
         <Sidebar />
         <MobileNav /> 
-        <NextNProgress />
-          <div className="root-container">
-              <div className="wrapper">
+        <div className="root-container">
+          <div className="wrapper">
+                   <NextNProgress />
                    {children}
-              </div>
-      </div>
+          </div>
+       </div>
       
         <Toaster />
       </main>
