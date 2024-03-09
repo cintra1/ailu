@@ -59,17 +59,27 @@ const Checkout = ({
   };
 
   return (
-    <form action={onCheckout} method="POST">
+   <>
+      <a href="https://forms.gle/bJXbv1KwZacwfiPe8">
+                  <Button className="w-full mb-2">
+                  Comprar créditos
+                  </Button>
+        </a>
+        {/* 
+        <form action={onCheckout} method="POST">
       <section>
         <Button
           type="submit"
           role="link"
           className="w-full"
+          disabled
         >
           Comprar créditos
-        </Button>
-      </section>
+        </Button> 
+       </section>
     </form>
+  */}
+    </>
   );
 };
 
