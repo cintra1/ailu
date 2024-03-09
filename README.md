@@ -61,5 +61,3 @@ Ailu é uma aplicação de Software-as-a-Service (SaaS) para processamento de im
 3. **Executando o Servidor:**
    - Inicie o servidor Next.js: `npm run dev`
    - O aplicativo estará disponível em `http://localhost:3000`
-
-## Contribuições
