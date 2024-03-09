@@ -369,7 +369,7 @@
   }
 
   .page-loader {
-    @apply flex-center flex-col gap-2 rounded-[10px] h-screen;
+    @apply flex-center flex-col h-80 sm:h-screen;
   }
 
   .transformed-placeholder {
