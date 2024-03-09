@@ -1,10 +1,10 @@
-# Plataforma SaaS de Processamento de Imagens com Recursos de IA
+# Ailu - Plataforma SaaS de edição de imagem com IA
 
 ## Introdução
 
-Ailu é uma aplicação de Software-as-a-Service (SaaS) para processamento de imagens, integrando recursos avançados de IA e um sistema robusto de pagamentos e créditos. Com o Next.js 14 como framework principal, juntamente com Cloudinary AI, Clerk e Stripe. A aplicação oferece uma solução abrangente para manipulação e aprimoramento de imagens, incluindo restauração de imagens, recoloração e remoção de objetos, preenchimento generativo e remoção de fundo. 
+Ailu é uma aplicação de Software-as-a-Service (SaaS) para tratamento de imagens, integrando recursos avançados de IA e um sistema robusto de pagamentos e créditos. Com o Next.js 14 como framework principal, juntamente com Cloudinary AI, Clerk e Stripe. A aplicação oferece uma solução abrangente para manipulação e aprimoramento de imagens, incluindo restauração de imagens, recoloração e remoção de objetos, preenchimento generativo e remoção de fundo. 
 
-## Tecnologias
+## ⚙️ Tecnologias
 
 - Next.js 14
 - TypeScript
@@ -15,7 +15,7 @@ Ailu é uma aplicação de Software-as-a-Service (SaaS) para processamento de im
 - Shadcn
 - TailwindCSS
 
-## Funcionalidades
+## 🧑‍💻 Funcionalidades
 
 - **Autenticação e Autorização:** Acesso seguro do usuário com registro, login e proteção de rotas.
   
@@ -47,11 +47,11 @@ Ailu é uma aplicação de Software-as-a-Service (SaaS) para processamento de im
 
 - **UI/UX Responsiva:** Uma experiência perfeita em todos os dispositivos com uma interface amigável ao usuário.
 
-## Como Começar
+## 🤸 Como Começar
 
 1. **Instalação:**
-   - Clone este repositório: `git clone https://github.com/seu-nome-de-usuario/seu-repositorio.git`
-   - Navegue até o diretório do projeto: `cd seu-repositorio`
+   - Clone este repositório: `git clone https://github.com/cintra1/ailu`
+   - Navegue até o diretório do projeto: `cd ailu`
    - Instale as dependências: `npm install`
 
 2. **Configuração:**
@@ -61,5 +61,3 @@ Ailu é uma aplicação de Software-as-a-Service (SaaS) para processamento de im
 3. **Executando o Servidor:**
    - Inicie o servidor Next.js: `npm run dev`
    - O aplicativo estará disponível em `http://localhost:3000`
-
-## Contribuições
