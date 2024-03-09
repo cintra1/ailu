@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Plataforma SaaS de Processamento de Imagens com Recursos de IA
 
-## Getting Started
+## Introdução
 
-First, run the development server:
+Ailu é uma aplicação de Software-as-a-Service (SaaS) para processamento de imagens, integrando recursos avançados de IA e um sistema robusto de pagamentos e créditos. Com o Next.js 14 como framework principal, juntamente com Cloudinary AI, Clerk e Stripe. A aplicação oferece uma solução abrangente para manipulação e aprimoramento de imagens, incluindo restauração de imagens, recoloração e remoção de objetos, preenchimento generativo e remoção de fundo. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologias
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js 14
+- TypeScript
+- MongoDB
+- Clerk
+- Cloudinary
+- Stripe
+- Shadcn
+- TailwindCSS
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Funcionalidades
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Autenticação e Autorização:** Acesso seguro do usuário com registro, login e proteção de rotas.
+  
+- **Mostruário de Imagens da Comunidade:** Explore transformações de usuários com navegação fácil usando paginação.
 
-## Learn More
+- **Busca Avançada de Imagens:** Encontre imagens por conteúdo ou objetos presentes na imagem de forma rápida e precisa.
 
-To learn more about Next.js, take a look at the following resources:
+- **Restauração de Imagem:** Reviva imagens antigas ou danificadas sem esforço.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Recoloração de Imagem:** Personalize imagens substituindo objetos por cores desejadas facilmente.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Preenchimento Generativo de Imagem:** Preencha áreas ausentes de imagens de forma contínua.
 
-## Deploy on Vercel
+- **Remoção de Objetos:** Limpe imagens removendo objetos indesejados com precisão.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Remoção de Fundo:** Extraia objetos de fundos com facilidade.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Download de Imagens Transformadas:** Salve e compartilhe imagens transformadas com IA convenientemente.
+
+- **Detalhes de Imagens Transformadas:** Visualize detalhes das transformações para cada imagem.
+
+- **Gerenciamento de Transformações:** Controle sobre exclusão e atualizações de transformações.
+
+- **Sistema de Créditos:** Ganhe ou compre créditos para transformações de imagem.
+
+- **Página de Perfil:** Acesse imagens transformadas e informações de crédito pessoalmente.
+
+- **Compra de Créditos:** Compre créditos de forma segura via Stripe para uso contínuo.
+
+- **UI/UX Responsiva:** Uma experiência perfeita em todos os dispositivos com uma interface amigável ao usuário.
+
+## Como Começar
+
+1. **Instalação:**
+   - Clone este repositório: `git clone https://github.com/seu-nome-de-usuario/seu-repositorio.git`
+   - Navegue até o diretório do projeto: `cd seu-repositorio`
+   - Instale as dependências: `npm install`
+
+2. **Configuração:**
+   - Configure suas chaves de API para Cloudinary e Stripe.
+   - Configure as variáveis de ambiente necessárias.
+
+3. **Executando o Servidor:**
+   - Inicie o servidor Next.js: `npm run dev`
+   - O aplicativo estará disponível em `http://localhost:3000`
+
+## Contribuições
