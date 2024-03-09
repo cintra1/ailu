@@ -1,5 +1,7 @@
 # Ailu - Plataforma SaaS de edição de imagem com IA
 
+https://github.com/cintra1/ailu/assets/101955322/c6767160-09a7-4e69-8188-a2486cf144bd
+
 ## Introdução
 
 Ailu é uma aplicação de Software-as-a-Service (SaaS) para tratamento de imagens, integrando recursos avançados de IA e um sistema robusto de pagamentos e créditos. Com o Next.js 14 como framework principal, juntamente com Cloudinary AI, Clerk e Stripe. A aplicação oferece uma solução abrangente para manipulação e aprimoramento de imagens, incluindo restauração de imagens, recoloração e remoção de objetos, preenchimento generativo e remoção de fundo. 
