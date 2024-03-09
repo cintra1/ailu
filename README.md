@@ -4,7 +4,7 @@
 
 Ailu é uma aplicação de Software-as-a-Service (SaaS) para tratamento de imagens, integrando recursos avançados de IA e um sistema robusto de pagamentos e créditos. Com o Next.js 14 como framework principal, juntamente com Cloudinary AI, Clerk e Stripe. A aplicação oferece uma solução abrangente para manipulação e aprimoramento de imagens, incluindo restauração de imagens, recoloração e remoção de objetos, preenchimento generativo e remoção de fundo. 
 
-## Tecnologias
+## ⚙️ Tecnologias
 
 - Next.js 14
 - TypeScript
@@ -15,7 +15,7 @@ Ailu é uma aplicação de Software-as-a-Service (SaaS) para tratamento de image
 - Shadcn
 - TailwindCSS
 
-## Funcionalidades
+## 🧑‍💻 Funcionalidades
 
 - **Autenticação e Autorização:** Acesso seguro do usuário com registro, login e proteção de rotas.
   
