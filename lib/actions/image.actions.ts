@@ -161,26 +161,68 @@ export async function getUserImages({
   limit = 9,
   page = 1,
   userId,
+  searchQuery = '' 
 }: {
   limit?: number;
   page: number;
   userId: string;
+  searchQuery?: string;
 }) {
   try {
     await connectToDatabase();
 
     const skipAmount = (Number(page) - 1) * limit;
 
-    const images = await populateUser(Image.find({ author: userId }))
+    cloudinary.config({
+      cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+      api_key: process.env.CLOUDINARY_API_KEY,
+      api_secret: process.env.CLOUDINARY_API_SECRET,
+      secure: true,
+    })
+    let expression = 'folder=ailu';
+
+    if (searchQuery) {
+      expression += ` AND resource_type=image AND (tags=${searchQuery} OR context.title=${searchQuery})`;
+    } else {
+      expression += ' AND resource_type=image';
+    }
+
+    const { resources } = await cloudinary.search
+      .expression(expression)
+      .execute();
+
+      const resourceIds = resources.map((resource: any) => resource.public_id);
+
+      let query = {};
+  
+      if(searchQuery) {
+        query = {
+          $or: [
+            { publicId: { $in: resourceIds } },
+            { title: { $regex: searchQuery, $options: 'i' } }
+          ]
+        }
+      } else {
+        query = {
+          publicId: { $in: resourceIds }
+        };
+      }
+  
+
+      const images = await populateUser(
+        Image.find({ author: userId, ...query }) // Adicione a condição do userId aqui
+      )
       .sort({ updatedAt: -1 })
       .skip(skipAmount)
       .limit(limit);
 
-    const totalImages = await Image.find({ author: userId }).countDocuments();
+    const totalImages = await Image.find(query).countDocuments();
+    const savedImages = await Image.find().countDocuments();
 
     return {
       data: JSON.parse(JSON.stringify(images)),
-      totalPages: Math.ceil(totalImages / limit),
+      totalPage: Math.ceil(totalImages / limit),
+      savedImages,
     };
   } catch (error) {
     handleError(error);

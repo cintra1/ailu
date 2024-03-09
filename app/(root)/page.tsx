@@ -1,14 +1,23 @@
 import { Collection } from '@/components/shared/Collection'
 import { getAllImages } from '@/lib/actions/image.actions'
+import { auth } from "@clerk/nextjs";
+import Image from "next/image";
+import { redirect } from "next/navigation";
 import React from 'react'
 import Animation from '@/components/shared/Animation'
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+import { getUserImages } from "@/lib/actions/image.actions";
+import { getUserById } from "@/lib/actions/user.actions";
 
 const Home = async ({ searchParams }: SearchParamProps) => {
   const page = Number(searchParams?.page) || 1;
   const searchQuery = (searchParams?.query as string) || '';
 
-  const images = await getAllImages({ page, searchQuery})
+  const { userId } = auth();
+
+  if (!userId) redirect("/sign-in");
+  const user = await getUserById(userId);
+  const images = await getUserImages({ page, userId: user._id, searchQuery});
 
   return (
     <>
