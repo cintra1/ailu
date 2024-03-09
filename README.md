@@ -47,7 +47,7 @@ Ailu é uma aplicação de Software-as-a-Service (SaaS) para tratamento de image
 
 - **UI/UX Responsiva:** Uma experiência perfeita em todos os dispositivos com uma interface amigável ao usuário.
 
-## Como Começar
+## 🤸 Como Começar
 
 1. **Instalação:**
    - Clone este repositório: `git clone https://github.com/cintra1/ailu`
