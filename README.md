@@ -1,4 +1,4 @@
-# Plataforma SaaS de Processamento de Imagens com Recursos de IA
+# Ailu - Plataforma SaaS de edição de imagem com IA
 
 ## Introdução
 
