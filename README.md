@@ -50,8 +50,8 @@ Ailu é uma aplicação de Software-as-a-Service (SaaS) para processamento de im
 ## Como Começar
 
 1. **Instalação:**
-   - Clone este repositório: `git clone https://github.com/seu-nome-de-usuario/seu-repositorio.git`
-   - Navegue até o diretório do projeto: `cd seu-repositorio`
+   - Clone este repositório: `git clone https://github.com/cintra1/ailu`
+   - Navegue até o diretório do projeto: `cd ailu`
    - Instale as dependências: `npm install`
 
 2. **Configuração:**
