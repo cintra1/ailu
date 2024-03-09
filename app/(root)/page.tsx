@@ -12,10 +12,13 @@ import { getUserById } from "@/lib/actions/user.actions";
 const Home = async ({ searchParams }: SearchParamProps) => {
   const page = Number(searchParams?.page) || 1;
   const searchQuery = (searchParams?.query as string) || '';
-
   const { userId } = auth();
 
-  if (!userId) redirect("/sign-in");
+  if (!userId) {
+    redirect("/sign-in");
+    return null; // Evita que o restante do código seja executado antes do redirecionamento
+  }
+
   const user = await getUserById(userId);
   const images = await getUserImages({ page, userId: user._id, searchQuery});
 
